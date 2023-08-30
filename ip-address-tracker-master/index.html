@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+</head>
+<body>
+
+  <div class="main_section">
+    <div class="first_section">
+      <h1>IP Address Tracker</h1>
+
+      <div class="first_section_2">
+        <input type="text" placeholder="Search for any IP address or domian" id="ipInput">
+        <button type="submit" id="fetchButton"><img src="./images/icon-arrow.svg"></button>
+      </div>
+
+      <div class="ss_2">
+        <div class="second_section">
+          <div class="second_1">
+            <h6>IP ADDRESS</h6>
+            <span id="ip_address">--</span>
+          </div>
+          <div class="second_2">
+            <h6>LOCATION</h6>
+            <span id="location">--</span>
+          </div>
+          <div class="second_3">
+            <h6>TIMEZONE</h6>
+            <span id="timezone">--</span>
+          </div>
+          <div class="second_4">
+            <h6>ISP</h6>
+            <span id="isp">--</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div  id="map" class="map-container">
+      
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="index.js"></script>
+</body>
+</html>
+
+
+<!-- <script>
+   var map = L.map('map').setView([51.505, -0.09], 13);
+
+   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+    
+   L.marker([51.5, -0.09]).addTo(map)
+    .bindPopup('Your Location')
+    .openPopup();
+</script> -->
